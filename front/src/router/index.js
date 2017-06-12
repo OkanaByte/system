@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 import Login from '../components/authentication/Login.vue'
 import Register from '../components/authentication/Register.vue'
-import Feed from '../components/Feed.vue'
+import DashboardPage from '../pages/DashboardPage.vue'
 
 Vue.use(Router)
 
@@ -27,9 +27,9 @@ export default new Router({
     }
   },
   {
-    path: '/feed',
-    component: Feed,
-    name: 'feed',
+    path: '/dashboard',
+    component: DashboardPage,
+    name: 'dashboard',
     meta: {
       forAuth: true
     }

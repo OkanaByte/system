@@ -35,7 +35,7 @@ export default {
       this.$http.post(loginUrl, postData)
       .then(response => {
         this.$auth.setToken(response.body.access_token, response.body.expires_in + Date.now())
-        this.$router.push('/feed')
+        this.$router.push({name: 'dashboard'})
       })
     }
   }

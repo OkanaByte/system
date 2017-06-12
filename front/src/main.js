@@ -19,7 +19,7 @@ router.beforeEach(
   if (to.matched.some(Record => Record.meta.forVisitors)) {
     if (Vue.auth.isAuthenticated()) {
       next({
-        path: '/feed'
+        name: 'dashboard'
       })
     } else {
       next()
@@ -27,7 +27,7 @@ router.beforeEach(
   } else if (to.matched.some(Record => Record.meta.forAuth)) {
     if (!Vue.auth.isAuthenticated()) {
       next({
-        path: '/login'
+        name: 'login'
       })
     } else {
       next()
